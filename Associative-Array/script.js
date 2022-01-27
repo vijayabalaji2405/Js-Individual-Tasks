@@ -31,7 +31,8 @@ const clear = function () {
 const validate = function (input) {
   const converting = input.toLocaleLowerCase();
   const convertedArr = converting
-    .replace(/[\.,[()!@#$%^&*~`""''?/\]{}&]+/g, " ")
+    .replace(/[\.,[()!@#$%^&*~?/\]{}&+:]+/g, " ")
+    .replace(/['"'`]+/g, "")
     .split(" ");
   let objectArr = {};
   for (let i = 0; i < convertedArr.length; i++) {
