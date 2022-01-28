@@ -14,31 +14,12 @@ let hobbies = {
 
 btn.addEventListener("click", () => {
   const inputs = inputField.value;
-  const finalResult = findAllHobbiesList(inputs, hobbies);
+  const finalResult = findAllHobbyists(inputs, hobbies);
   answer.textContent = finalResult;
   clear();
 });
 
-btn2.addEventListener("click", () => {
-  const inputName = addName.value;
-  const inputHobbie = addHobbie.value;
-  addingData(inputName, inputHobbie);
-  clear();
-});
-
-const addingData = function (name, hobbie) {
-  console.log(name, hobbie);
-  if (hobbies[name] === undefined) {
-    hobbies[name] = [hobbie];
-    answer2.textContent = `Added in ${name}`;
-  } else {
-    hobbies[name].push(hobbie);
-    answer2.textContent = `Updated in ${name}`;
-  }
-  console.log(hobbies);
-};
-
-const findAllHobbiesList = function (hobbie, obj) {
+const findAllHobbyists = function (hobbie, obj) {
   let finals = [];
   let err = "Please enter a valid input";
   if (hobbie === "") return err;
@@ -56,10 +37,7 @@ const findAllHobbiesList = function (hobbie, obj) {
 };
 const clear = function () {
   inputField.value = "";
-  addName.value = "";
-  addHobbie.value = "";
 };
 const clearingTable = function () {
   answer.textContent = "";
-  answer2.textContent = "";
 };

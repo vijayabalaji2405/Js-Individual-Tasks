@@ -24,6 +24,7 @@ btn.addEventListener("click", () => {
 });
 const checkingBrac = function (codes) {
   let codess = [...codes];
+  console.log(codess);
   let final;
   const fore = codes.forEach((code, index) => {
     if (code === "]") {
