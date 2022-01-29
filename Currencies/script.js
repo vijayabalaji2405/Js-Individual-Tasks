@@ -23,7 +23,8 @@ btn.addEventListener("click", () => {
   if (inputValue.value !== "") {
     inputsValue = inputValue.value;
   } else {
-    final.textContent = "Please Input a value";
+    // final.textContent = "Please Input a value";
+    return;
   }
 });
 const getSupported = async function () {
