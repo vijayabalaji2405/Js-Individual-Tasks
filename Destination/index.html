@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Start</th>
+        <th>End</th>
+        <th>Days</th>
+      </tr>
+      <tr>
+        <td>Tirunelveli</td>
+        <td>Madurai</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Madurai</td>
+        <td>Tirunelveli</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Madurai</td>
+        <td>Trichy</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Trichy</td>
+        <td>Chennai</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Madurai</td>
+        <td>Coimbatore</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Coimbatore</td>
+        <td>Chennai</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Madurai</td>
+        <td>Salem</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Salem</td>
+        <td>Bangalore</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Chennai</td>
+        <td>Bangalore</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Bangalore</td>
+        <td>Mumbai</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Chennai</td>
+        <td>Mumbai</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Coimbatore</td>
+        <td>Bangalore</td>
+        <td>3</td>
+      </tr>
+    </table>
+    <div class="container">
+      <div class="selects">Select Your Cities</div>
+      <div class="total">
+        <div class="first">
+          <select name="from" class="from">
+            <option class="fromclass" value="fromChange">FROM</option>
+          </select>
+        </div>
+        <div class="second">
+          <select name="from" class="from to">
+            <option class="fromclass" value="fromChange">TO</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn">Destination Route →</button>
+      <div class="answer"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
