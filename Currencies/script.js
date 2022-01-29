@@ -59,7 +59,7 @@ const search = async function (from, to) {
 
 const math = function (amout, totransfer, transfered) {
   const transfer = amout * totransfer;
-  final.textContent = `Converted: ${transfer} ${transfered}`;
+  final.textContent = `Converted: ${transfer.toFixed(2)} ${transfered}`;
   clear();
 };
 const clear = function () {
