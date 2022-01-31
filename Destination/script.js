@@ -6,6 +6,15 @@ const cities = [
   "Coimbatore",
   "Salem",
   "Bangalore",
+];
+const cities1 = [
+  "Madurai",
+  "Tirunelveli",
+  "Trichy",
+  "Chennai",
+  "Coimbatore",
+  "Salem",
+  "Bangalore",
   "Mumbai",
 ];
 const months = [
@@ -106,6 +115,7 @@ let shortPath = (obj, startingPoint, endingPoint) => {
 
   // using the stored paths from start node to end node
   // record the shortest path
+
   let shortestPath = [endingPoint];
   let parent = parentOfElements[endingPoint];
   console.log(parent);
@@ -164,9 +174,16 @@ const fetchingFrom = function (data) {
     createFrom += `<option value = '${e}'>${data[e]}</option>`;
   });
   from.insertAdjacentHTML("beforeend", createFrom);
-  to.insertAdjacentHTML("beforeend", createFrom);
 };
 fetchingFrom(cities);
+const fetchingTo = function (data) {
+  let createFrom = "";
+  Object.keys(data).forEach((e, index) => {
+    createFrom += `<option value = '${e}'>${data[e]}</option>`;
+  });
+  to.insertAdjacentHTML("beforeend", createFrom);
+};
+fetchingTo(cities1);
 
 from.addEventListener("change", (e) => {
   selectFrom = e.target.value;
@@ -180,7 +197,7 @@ to.addEventListener("change", (e) => {
 
 btn.addEventListener("click", () => {
   let from = cities[selectFrom];
-  let to = cities[selectTo];
+  let to = cities1[selectTo];
   console.log(from, to);
   if (from === to && from === undefined && to === undefined) {
     answer.innerHTML = "Please Enter a Valid Input";
@@ -197,7 +214,7 @@ btn.addEventListener("click", () => {
       calculatingDays(final.path);
       settingUI(final.path, final.distance, daysFlow);
     } else {
-      answer.innerHTML = "No Route";
+      answer.innerHTML = "Route Not Found";
     }
   }
 });
@@ -233,7 +250,7 @@ const settingUI = function (path, totaldays, numberPath) {
     append += `  ${dayFrom} ${monthFrom} --> Arrive on ${dayTo} ${monthTo}`;
     answer.innerHTML = append;
   } else {
-    answer.innerHTML = "No Route";
+    answer.innerHTML = "Route Not Found";
   }
 
   daysFlow = [];
